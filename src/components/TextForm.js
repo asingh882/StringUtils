@@ -5,6 +5,7 @@ import React, {useState} from 'react'
 
 export default function TextFrom(props) {
   const [text, setText] = useState('');
+
   //text = "Changing text"; // Wrong way to change state variable
   //setText("Changing text");  // Correct way to change state variable
   // const [darkStyle, setDarkStyle] = useState({
@@ -77,11 +78,11 @@ export default function TextFrom(props) {
           <div className="mb-3">
               <textarea className="form-control" value={text} onChange={handleOnChange} style={{backgroundColor: props.mode === 'light' ? 'white' : 'black', color: props.mode === 'light' ? 'black' : 'white'}}  id="myBox" rows="8"></textarea>
           </div>
-          <button className="btn btn-outline-success mx-2 my-2" onClick={handleUpClick}>Conver to Uppercase</button>
-          <button className="btn btn-outline-success mx-2 my-2" onClick={handleLowClick}>Conver to Lowercase</button>
-          <button className="btn btn-outline-success mx-2 my-2" onClick={handleClrClick}>Clear Text</button>
-          <button className="btn btn-outline-success mx-2 my-2" onClick={handleCopy}>Copy Text</button>
-          <button className="btn btn-outline-success mx-2 my-2" onClick={handleExtraSpaces}>Remove Extra Spaces</button>
+          <button disabled={text.length===0} className="btn btn-outline-success mx-2 my-2" onClick={handleUpClick}>Conver to Uppercase</button>
+          <button disabled={text.length===0} className="btn btn-outline-success mx-2 my-2" onClick={handleLowClick}>Conver to Lowercase</button>
+          <button disabled={text.length===0} className="btn btn-outline-success mx-2 my-2" onClick={handleClrClick}>Clear Text</button>
+          <button disabled={text.length===0} className="btn btn-outline-success mx-2 my-2" onClick={handleCopy}>Copy Text</button>
+          <button disabled={text.length===0} className="btn btn-outline-success mx-2 my-2" onClick={handleExtraSpaces}>Remove Extra Spaces</button>
           {/* <button type="button" onClick={toggleStyle} className="btn btn-outline-success mx-2 my-4">{btnText}</button>         */}
       </div>
       <div className="container my-3" style={{color: props.mode === 'light' ? 'black' : 'white'}}>
