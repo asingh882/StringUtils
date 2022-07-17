@@ -18,6 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+    
   },
   "eslintConfig": {
     "extends": [
@@ -49,5 +50,6 @@
   "bugs": {
     "url": "https://github.com/asingh882/StringUtils/issues"
   },
-  "homepage": "https://github.com/asingh882/StringUtils#readme"
+  "homepage": "."
+  
 }
